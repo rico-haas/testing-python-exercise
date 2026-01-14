@@ -41,6 +41,7 @@ def test_set_initial_condition():
     solver.T_cold = 200.0
     solver.T_hot = 800.0
 
+    actual_result = solver.set_initial_condition()
     expected_result = numpy.array(
         [
             [
@@ -81,4 +82,4 @@ def test_set_initial_condition():
         ]
     )
 
-    assert numpy.array_equal(solver.set_initial_condition(), expected_result)
+    assert numpy.array_equal(actual_result, expected_result)
